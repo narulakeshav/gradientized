@@ -1,0 +1,72 @@
+doctype html
+html
+    head
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(charset="UTF-8")
+
+        // Favicon and Title
+        title Gradientized
+        link(rel='shortcut icon', href='logo.png')
+
+        // META TAGS
+        meta(property='og:title', content='Ticker')
+        meta(property='og:description', content='Ticker')
+
+        // CSS CDNs
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css')
+        link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+
+        // MY CSS FILE
+        link(rel='stylesheet', href='/scss/design.css', media="all")
+    body
+        .col-md-12
+            .col-md-12.gradient-info
+                .col-md-2
+                    p.app-name gradientized
+                .col-md-3
+                    button.btn.btn-color#first(data-clipboard-text="#6D78E0") #6D78E0
+                    button.btn.btn-color#second(data-clipboard-text="#A486E0") #A486E0
+                .col-md-4.col-md-offset-2
+                    button.btn.copy-css#copy(data-toggle="modal", data-target="#clipboard") Copy CSS Styling
+                    button.btn.copy-css Share
+                    button.btn.copy-css GitHub
+                .col-md-1.nav-header#next
+                    button.btn-round next &nbsp;
+                        span.fa.fa-angle-right.fa-lg
+            .col-md-12.gradient#gradient
+        .modal.fade.modal.fade#clipboard(tabindex='-1', role='dialog')
+            .modal-dialog
+                .modal-content
+                    button.btn.btn-close(data-dismiss='modal', aria-label='Close') ×
+                    .modal-header
+                        h3 Copy CSS Code
+                        p Copy the code and make your project awesome.
+                        pre#code
+                            code
+                                span.comment /* fallback for older browsers */
+                                br
+                                span#line_1 background: #A486EO;
+                                br
+                                br
+                                span.comment /* for chrome, safari, ie, firefox */
+                                br
+                                span#line_2 background: -webkit-linear-gradient(90deg, #6D78E0, #A486E0);
+                                br
+                                span#line_3 background: linear-gradient(90deg, #6D78E0, #A486E0);
+                    .col-md-12(align='center')
+                            button.btn.btn-clipboard(data-dismiss='modal', data-clipboard-target="#code")
+                                span.fa.fa-clone &nbsp;&nbsp;
+                                | Copy to Clipboard
+        .message-box#box
+            .message#message-parent
+                span#main-message Copied!
+
+        // JAVASCRIPT CDNs
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js')
+
+        // MY JAVSCRIPT FILE
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js')
+        script(src='/js/gradient.js')
