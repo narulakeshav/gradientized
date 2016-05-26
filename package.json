@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "clipboard": "^1.5.10",
+    "express": "^4.12.3"
+  }
+}
