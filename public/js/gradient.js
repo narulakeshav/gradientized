@@ -10,7 +10,6 @@ $(document).ready(function() {
     var code = '-webkit-linear-gradient(#16A085, #F4D03F);';
     var next = d.getElementById('next');
     var gradientDiv = d.getElementById('gradient');
-    var audio = d.getElementById('audio');
     var t;
 
     // CREATS FIRSTCOLOR AND SECONDCOLOR VARIABLES
@@ -114,14 +113,11 @@ $(document).ready(function() {
         changeStyle('.gradient-info', 'display', 'none');
         $('#next').trigger('click');
         changeStyle('.music', 'display', 'block');
-        audio.play();
     }
 
     /* STOPS THE AUDIO WHEN STOP IS CLICKED */
     $('.music').click(function() {
         clearTimeout(t);
-        audio.pause();
-        audio.currentTime = 0;
         changeStyle('.gradient-info', 'display', 'block');
         changeStyle('.music', 'display', 'none');
     });
