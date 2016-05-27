@@ -7,9 +7,11 @@ $(document).ready(function() {
     
     // GETS HTML VALUES FROM IDs
     var d = document;
-    var code = '-webkit-linear-gradient(#6D78E0, #A486E0);';
+    var code = '-webkit-linear-gradient(#16A085, #F4D03F);';
     var next = d.getElementById('next');
     var gradientDiv = d.getElementById('gradient');
+    var audio = d.getElementById('audio');
+    var t;
 
     // CREATS FIRSTCOLOR AND SECONDCOLOR VARIABLES
     var firstColor;
@@ -20,16 +22,17 @@ $(document).ready(function() {
     var mainMessage = d.getElementById("main-message");
     var messageParent = d.getElementById("message-parent");
 
-    // SHOWS DIFFERENT GRADIENT ON DIV/BUTTON CLICK
+    /* SHOWS DIFFERENT GRADIENT ON DIV/BUTTON CLICK */
     next.onclick = function() {
         // GENERATES RANDOM HEXCODE AND ASSIGNS CODE
         firstColor = generateHex();
         secondColor = generateHex();
 
         // GENERATES BACKGROUND CSS CODE
-        code = '-webkit-linear-gradient(left, #' + firstColor + ', #' + secondColor + ')';
+        code = '-webkit-linear-gradient(45deg, #' + firstColor + ', #' + secondColor + ')';
         
         // CHANGES BACKROUND GRADIENT AND BUTTON COLORS
+        // changeStyle('.gradient', 'background', code);
         changeStyle('.gradient', 'background', code);
         changeStyle('#first', 'background', ('#' + firstColor));
         changeStyle('#second', 'background', ('#' + secondColor));
@@ -44,8 +47,8 @@ $(document).ready(function() {
         updateHTML('#first', '#' + firstColor);
         updateHTML('#second', '#' + secondColor);
         updateHTML('#line_1', 'background: #' + firstColor + ';');
-        updateHTML('#line_2', 'background: -webkit-linear-gradient(90deg, ' + '#' + firstColor + ', #' + secondColor + ');');
-        updateHTML('#line_3', 'background: linear-gradient(90deg, ' + '#' + firstColor + ', #' + secondColor + ');');
+        updateHTML('#line_2', 'background: -webkit-linear-gradient(45deg, ' + '#' + firstColor + ', #' + secondColor + ');');
+        updateHTML('#line_3', 'background: linear-gradient(45deg, ' + '#' + firstColor + ', #' + secondColor + ');');
     };
 
     $('.btn-clipboard').click(function() {
@@ -96,7 +99,30 @@ $(document).ready(function() {
         $(element).css(property, value);
     }
 
+    /* UPDATES HTML CONTENT */
     function updateHTML(element, value) {
         $(element).html(value);
     }
+
+    /* PLAYS MUSIC WHEN EDM IS CLICKED */
+    $('#edm').click(function() {
+        t = setInterval(clickNext, 150);
+    });
+
+    /* HIDES THE INFO PANEL FOR AN AMAZING EDM EXPERIENCE */
+    function clickNext() {
+        changeStyle('.gradient-info', 'display', 'none');
+        $('#next').trigger('click');
+        changeStyle('.music', 'display', 'block');
+        audio.play();
+    }
+
+    /* STOPS THE AUDIO WHEN STOP IS CLICKED */
+    $('.music').click(function() {
+        clearTimeout(t);
+        audio.pause();
+        audio.currentTime = 0;
+        changeStyle('.gradient-info', 'display', 'block');
+        changeStyle('.music', 'display', 'none');
+    });
 });
