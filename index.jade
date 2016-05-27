@@ -28,14 +28,15 @@ html
                     button.btn.btn-color#first(data-clipboard-text="#16A085") #16A085
                     button.btn.btn-color#second(data-clipboard-text="#F4D03F") #F4D03F
                 .col-xs-5.col-xs-offset-1
-                    button.btn.copy-css#copy(data-toggle="modal", data-target="#clipboard") Copy CSS Styling
-                    a.btn.copy-css Share
+                    button.btn.copy-css#copy(data-clipboard-target="#code") Copy CSS Styling
                     a.btn.copy-css(href='https://github.com/NarulaKeshav/gradientized', target='_blank') GitHub
                     button.btn.copy-css#edm EDM
                 .col-xs-1.nav-header#next
                     button.btn-round next &nbsp;
                         span.fa.fa-angle-right.fa-lg
             .col-xs-12.gradient#gradient
+                .music.stop
+                    p Play some EDM, hit <strong>esc</strong> to exit.
         .col-xs-12.card-phone
             img.img-responsive(src='/img/logo-sm.png')
             h2 Uh Oh! ☹️
@@ -45,35 +46,24 @@ html
             button.btn.btn-mb View Projects
             br
             button.btn.btn-mb My Website
-            br   
-        .modal.fade.modal.fade#clipboard(tabindex='-1', role='dialog')
-            .modal-dialog
-                .modal-content
-                    .modal-header
-                        h3 Copy CSS Code
-                        p Copy the code and make your project awesome.
-                        pre#code
-                            code
-                                span.comment /* fallback for older browsers */
-                                br
-                                span#line_1 background: #A486EO;
-                                br
-                                br
-                                span.comment /* for chrome, safari, ie, firefox */
-                                br
-                                span#line_2 background: -webkit-linear-gradient(45deg, #6D78E0, #A486E0);
-                                br
-                                span#line_3 background: linear-gradient(45deg, #6D78E0, #A486E0);
-                    .col-xs-12(align='center')
-                            button.btn.btn-clipboard(data-dismiss='modal', data-clipboard-target="#code")
-                                span.fa.fa-clone &nbsp;&nbsp;
-                                | Copy to Clipboard
+            br
         .message-box#box
             .message#message-parent
                 span#main-message Copied!
-        audio(id='audio', src='/sleepless.mp3')
-        .col-xs-12.music.stop
-            p Sleepless by Flume (Click to stop)
+        audio(id='audio', src='/sleepless.mp3') 
+        .box
+            pre#code
+                code
+                    span.comment /* fallback for older browsers */
+                    br
+                    span#line_1 background: #A486EO;
+                    br
+                    br
+                    span.comment /* for chrome, safari, ie, firefox */
+                    br
+                    span#line_2 background: -webkit-linear-gradient(45deg, #6D78E0, #A486E0);
+                    br
+                    span#line_3 background: linear-gradient(45deg, #6D78E0, #A486E0);
 
         // JAVASCRIPT CDNs
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
