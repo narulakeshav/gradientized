@@ -148,8 +148,8 @@ a:hover {
     margin-top: 12%;
     .modal-content {
         background: $white;
-        border-radius: 0px;
-        padding: 8px 5px 25px;
+        border-radius: 4px;
+        padding: 8px 5px 55px;
         border: none;
         box-shadow: none;
         margin: 15px 0;
@@ -186,7 +186,8 @@ a:hover {
             text-align: center;
             padding: 0 20px;
             margin: 7px 5px;
-            background: linear-gradient(45deg, #16A085, #F4D03F);
+            margin-top: -6px;
+            background: #16A085;
             border-radius: 25px;
             color: rgba(255,255,255,0.8);
             font: $medium 13px/44px Roboto;
