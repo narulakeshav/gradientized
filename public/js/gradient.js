@@ -36,7 +36,7 @@ $(document).ready(function() {
         changeStyle('.gradient', 'background', code);
         changeStyle('#first', 'background', ('#' + firstColor));
         changeStyle('#second', 'background', ('#' + secondColor));
-        changeStyle('.btn-clipboard', 'background', code);
+        changeStyle('.btn-clipboard', 'background', ('#' + firstColor));
         changeStyle('.comment', 'color', ('#' + secondColor));
 
         // SETS CLIPBOARD TEXT TO THE UPDATED COLOR
