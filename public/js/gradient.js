@@ -115,6 +115,21 @@ $(document).ready(function() {
         changeStyle('.music', 'display', 'block');
     }
 
+    $("#input").keypress(function(event){
+        if(event.keyCode == 13){
+            event.preventDefault();
+            addButton.click();
+            $("#input").val("");
+        }
+    });
+
+    $(document).keyup(function(event) {
+        if (event.keyCode === 27) {
+            event.preventDefault();
+            $('.music').trigger('click');
+        }
+    });
+
     /* STOPS THE AUDIO WHEN STOP IS CLICKED */
     $('.music').click(function() {
         clearTimeout(t);
