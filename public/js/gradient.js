@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // INITIALIZES CLIPBOARD ON HTML ELEMENTS
-    new Clipboard('.btn-clipboard');
+    new Clipboard('#copy');
     new Clipboard('#first');
     new Clipboard('#second');
     
@@ -51,7 +51,7 @@ $(document).ready(function() {
         updateHTML('#line_3', 'background: linear-gradient(45deg, ' + '#' + firstColor + ', #' + secondColor + ');');
     };
 
-    $('.btn-clipboard').click(function() {
+    $('#copy').click(function() {
         displayMessage();
     });
 
