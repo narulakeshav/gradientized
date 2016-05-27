@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- Favicon and Title-->
+    <title>Gradientized - Find gradients for your next project</title>
+    <link rel="shortcut icon" href="/img/logo.png">
+    <!-- META TAGS-->
+    <meta property="og:title" content="Ticker">
+    <meta property="og:description" content="Ticker">
+    <!-- CSS CDNs-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- MY CSS FILE-->
+    <link rel="stylesheet" href="/scss/design.css" media="all">
+  </head>
+  <body>
+    <div class="col-xs-12">
+      <div class="col-xs-12 gradient-info">
+        <div class="col-xs-2">
+          <p class="app-name">gradientized</p>
+        </div>
+        <div class="col-xs-3">
+          <button id="first" data-clipboard-text="#16A085" class="btn btn-color">#16A085</button>
+          <button id="second" data-clipboard-text="#F4D03F" class="btn btn-color">#F4D03F</button>
+        </div>
+        <div class="col-xs-5 col-xs-offset-1">
+          <button id="copy" data-clipboard-target="#code" class="btn copy-css">Copy CSS Styling</button><a href="https://github.com/NarulaKeshav/gradientized" target="_blank" class="btn copy-css">GitHub</a>
+          <button id="edm" class="btn copy-css">EDM</button>
+        </div>
+        <div id="next" class="col-xs-1 nav-header">
+          <button class="btn-round">next &nbsp;<span class="fa fa-angle-right fa-lg"></span></button>
+        </div>
+      </div>
+      <div id="gradient" class="col-xs-12 gradient">
+        <div class="music stop">
+          <p>Play some EDM, hit <strong>esc</strong> to exit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 card-phone"><img src="/img/logo-sm.png" class="img-responsive">
+      <h2>Uh Oh! ☹️</h2>
+      <p>Gradientized is not supported on this screen size. Go on a bigger screen and try!</p>
+      <button class="btn btn-mb">GitHub Repo</button><br>
+      <button class="btn btn-mb">View Projects</button><br>
+      <button class="btn btn-mb">My Website</button><br>
+    </div>
+    <div id="box" class="message-box">
+      <div id="message-parent" class="message"><span id="main-message">Copied!</span></div>
+    </div>
+    <div class="box">
+      <pre id="code"><code><span class="comment">/* fallback for older browsers */</span><br><span id="line_1">background: #A486EO;</span><br><br><span class="comment">/* for chrome, safari, ie, firefox */</span><br><span id="line_2">background: -webkit-linear-gradient(45deg, #6D78E0, #A486E0);</span><br><span id="line_3">background: linear-gradient(45deg, #6D78E0, #A486E0);</span></code></pre>
+    </div>
+    <!-- JAVASCRIPT CDNs-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- MY JAVSCRIPT FILE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+    <script src="/js/gradient.js"></script>
+  </body>
+</html>
