@@ -1,0 +1,211 @@
+/* Importing Google Font */
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500);
+/* Color Declarations */
+/* Font Properties */
+/* Mixins */
+/* General CSS Properties */
+body {
+  width: 100%;
+  height: 100vh; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+
+/* Div Tags CSS */
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4,
+.col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8,
+.col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  padding: 0; }
+
+.gradient {
+  -webkit-transition: all 0.05s;
+  -moz-transition: all 0.05s;
+  -ms-transition: all 0.05s;
+  transition: all 0.05s;
+  height: 100vh;
+  background: linear-gradient(45deg, #16A085, #F4D03F); }
+
+.gradient-info {
+  height: 70px;
+  background: rgba(25, 25, 25, 0.2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1; }
+
+.nav-header {
+  background: rgba(25, 25, 25, 0.2);
+  height: 70px; }
+
+.music,
+.music:focus {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  display: none;
+  position: absolute;
+  top: 5%;
+  left: 42%;
+  padding: 14px 20px;
+  border-radius: 25px;
+  background: rgba(25, 25, 25, 0.07); }
+  .music p,
+  .music:focus p {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    color: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    font: 300 13px Roboto; }
+
+.music:hover {
+  background: #FFFFFF;
+  cursor: pointer; }
+  .music:hover p {
+    color: #666; }
+
+.card-phone {
+  display: none; }
+
+/* Button CSS */
+.btn-round,
+.btn-round:focus {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 70px;
+  border: none;
+  background: transparent;
+  outline: 0;
+  color: rgba(255, 255, 255, 0.8);
+  padding-right: 30px;
+  font: 400 15px/44px Roboto; }
+  .btn-round span,
+  .btn-round:focus span {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #FFFFFF; }
+
+.btn-round:hover {
+  color: #FFFFFF; }
+  .btn-round:hover span {
+    color: #FFFFFF; }
+
+.copy-css,
+.copy-css:focus,
+.btn-color,
+.btn-color:focus {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 10px 6px 0;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  color: #FFFFFF;
+  font: 500 13px/44px Roboto;
+  text-transform: uppercase;
+  outline: 0;
+  box-shadow: none; }
+
+.btn-color:hover,
+.copy-css:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF; }
+
+.btn-color,
+.btn-color:focus {
+  padding: 0px 25px; }
+
+#first {
+  background: #16A085; }
+
+#second {
+  background: #F4D03F; }
+
+/* Text Properties CSS */
+.app-name {
+  font-family: Lobster;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding-left: 20px;
+  padding-top: 9px; }
+
+pre {
+  display: none; }
+
+.message-box {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(25, 25, 25, 0.4);
+  border-radius: 25px;
+  padding: 14px 25px;
+  display: none; }
+  .message-box #main-message {
+    color: #FFFFFF;
+    font-weight: 400; }
+
+@media (max-width: 970px) {
+  .btn-color,
+  .copy-css,
+  .col-xs-3,
+  .gradient,
+  .gradient-info,
+  .app-name,
+  #next {
+    display: none; }
+
+  body {
+    background: linear-gradient(45deg, #16A085, #F4D03F); }
+
+  .card-phone {
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    padding-top: 30%;
+    margin: 0 auto; }
+    .card-phone img {
+      height: 60px;
+      width: 60px;
+      margin: 10px auto 20px; }
+    .card-phone h2 {
+      font: 300 30px Roboto;
+      color: #FFFFFF; }
+    .card-phone p {
+      font: 300 18px Roboto;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 24px;
+      padding-bottom: 6px; }
+
+  .btn-mb,
+  .btn-mb:focus {
+    padding: 12px 14px;
+    min-width: 40%;
+    margin: 4px auto;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    outline: 0;
+    box-shadow: none; }
+
+  .btn-mb:hover {
+    background: #FFFFFF;
+    color: #16A085; } }
+
+/*# sourceMappingURL=design.css.map */
