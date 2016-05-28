@@ -146,7 +146,8 @@ a:hover {
     padding-top: 9px;
 }
 pre {
-    display: none;
+    position: absolute;
+    opacity: 0;
 }
 .message-box {
     @include transition(1s);
